@@ -1,0 +1,248 @@
+/* Global Styles */
+html {
+  scroll-behavior: smooth;
+  background-color: black;
+}
+
+body {
+  color: white;
+  font-family: Arial, sans-serif; /* Added a default font */
+}
+
+/* Header and Navigation Styles */
+.wrapper {
+  display: flex;
+  justify-content: center;
+}
+
+#header ul {
+  list-style: none;
+  display: flex;
+  justify-content: center;
+  margin: 10px;
+}
+
+#header li {
+  margin: 20px; /* Adjust spacing as needed */
+  text-align: center;
+}
+
+/* Grid Container Styles */
+.container {
+  display: grid;
+  grid-template-rows: auto; /* Fit rows to content */
+  grid-template-columns: repeat(4, 1fr);
+  gap: 3%;
+  grid-template-areas:
+    "img head head head"
+    "obj obj profile profile"
+    "education education edu edu" /* Updated grid-template-areas */
+    "project project pro pro"
+    "work work wor wor"
+    "con con con con";
+  width: 70vw;
+  padding: 10px;
+}
+
+/* Grid Item Styles */
+#image,
+#header,
+#obj,
+#profile,
+#education, /* Added the education grid */
+#project,
+#wor,
+#contact {
+  border-radius: 15px;
+  border: 2px solid white;
+  color: white;
+  box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.2); /* Adjust shadow as needed */
+  padding: 10px; /* Add padding to fit content */
+}
+
+#image {
+  grid-area: img;
+  text-align: center;
+  box-shadow: 5px 5px 5px rgb(3, 153, 246);
+  border-radius: 50%;
+}
+
+#header {
+  grid-area: head;
+  align-items: center;
+  background-image: linear-gradient(to left, rgba(0, 0, 0, 0), rgb(3, 153, 246));
+}
+
+#obj {
+  grid-area: obj;
+  background-image: linear-gradient(to left, rgba(0, 0, 0, 0), mediumvioletred);
+  box-shadow: 5px 5px 5px pink;
+}
+
+#profile {
+  grid-area: profile;
+  text-align: center;
+  border-radius: 50%;
+  box-shadow: 5px 5px 5px whitesmoke;
+}
+
+#profile img {
+  border-radius: 20px;
+  max-width: 50%; /* Ensure images don't exceed container width */
+  height: auto; /* Maintain aspect ratio */
+  transition: transform 0.3s ease-in-out; /* Add transition for image scaling */
+}
+
+#project {
+  grid-area: pro;
+  background-image: linear-gradient(to left, rgba(0, 0, 0, 0), rgb(15, 126, 104));
+  box-shadow: 5px 5px 5px greenyellow;
+}
+
+#wor {
+  grid-area: work;
+  background-image: linear-gradient(to left, rgba(0, 0, 0, 0), rgb(126, 74, 15));
+  box-shadow: 5px 5px 5px orange;
+}
+
+#contact {
+  grid-area: con;
+  text-align: center;
+  background-image: linear-gradient(rgba(0, 0, 0, 0), rgb(179, 59, 59));
+  box-shadow: 5px 5px 5px yellow;
+}
+
+/* Education Grid Styles */
+#education {
+  grid-area: education; /* Added the education grid */
+  background-image: linear-gradient(to left, rgba(0, 0, 0, 0), rgb(126, 160, 245));
+  box-shadow: 5px 5px 5px pink;
+}
+
+/* Image Styles */
+#sample img {
+  border-radius: 20px;
+  border: 7px double orangered;
+  box-shadow: 5px 5px 5px green;
+  max-width: 100%; /* Ensure images don't exceed container width */
+  height: auto; /* Maintain aspect ratio */
+  transition: transform 0.3s ease-in-out; /* Add transition for image rotation */
+}
+
+#sample img:hover {
+  transform: scale(0.95) rotate(-5deg); /* Scale and rotate on hover */
+}
+
+/* Link Styles */
+a {
+  color: white;
+  font-weight: bold;
+  font-size: larger;
+  font-style: italic;
+  text-decoration: none;
+}
+
+a:hover {
+  color: yellow;
+}
+
+/* Contact Section Styles */
+#contact {
+    grid-area: con;
+    text-align: center;
+    background-image: linear-gradient(rgba(0, 0, 0, 0), rgb(179, 59, 59));
+    border: 2px solid white;
+    box-shadow: 5px 5px 5px yellow;
+    padding: 20px;
+}
+
+#contact h2 {
+    text-decoration: underline;
+    font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+    margin-bottom: 20px;
+    color: white;
+}
+
+#contact form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+#contact label {
+    color: white;
+    font-weight: bold;
+    margin: 10px 0;
+}
+
+#contact input,
+#contact textarea {
+    padding: 10px;
+    border: 2px solid white;
+    border-radius: 5px;
+    background-color: rgba(255, 255, 255, 0.1);
+    color: white;
+    margin: 5px 0;
+}
+
+#contact button {
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    background-color: rgb(179, 59, 59);
+    color: white;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.3s ease-in-out; /* Add transition for button color */
+}
+
+#contact button:hover {
+    background-color: red; /* Change button color on hover */
+}
+
+/* Social Media Links Styles */
+.social {
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+}
+
+.social a {
+    text-decoration: none;
+    color: white;
+    font-size: 24px;
+    margin: 0 10px;
+    transition: color 0.3s ease-in-out; /* Add transition for link color */
+}
+
+.social a:hover {
+    color: yellow; /* Change link color on hover */
+}
+
+/* Link Styles */
+a {
+    color: white;
+    font-weight: bold;
+    font-size: larger;
+    font-style: italic;
+}
+
+a:hover {
+    color: yellow;
+}
+
+#contact a {
+    margin-left: 30px;
+}
+
+/* Heading Styles */
+h2 {
+    text-decoration: underline;
+    font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+}
+
+h3 {
+    color: yellow;
+    font-style: italic;
+}
+
